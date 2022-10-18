@@ -200,10 +200,11 @@ vdev_create(PDRIVER_OBJECT drvobj, vdev_type_t type);
 void vdev_add_ref(pvdev_t vdev);
 void vdev_del_ref(pvdev_t vdev);
 
+PAGEABLE
 pvpdo_dev_t vhub_find_vpdo(pvhub_dev_t vhub, unsigned port);
 
-void
-vhub_mark_unplugged_vpdo(pvhub_dev_t vhub, pvpdo_dev_t vpdo);
+PAGEABLE 
+void vhub_mark_unplugged_vpdo(pvhub_dev_t vhub, pvpdo_dev_t vpdo);
 
 LPWSTR
 get_device_prop(PDEVICE_OBJECT pdo, DEVICE_REGISTRY_PROPERTY prop, PULONG plen);

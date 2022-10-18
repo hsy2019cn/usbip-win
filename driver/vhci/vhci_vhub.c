@@ -19,8 +19,8 @@ find_vpdo(pvhub_dev_t vhub, unsigned port)
 	return NULL;
 }
 
-PAGEABLE pvpdo_dev_t
-vhub_find_vpdo(pvhub_dev_t vhub, unsigned port)
+PAGEABLE 
+pvpdo_dev_t vhub_find_vpdo(pvhub_dev_t vhub, unsigned port)
 {
 	pvpdo_dev_t	vpdo;
 
@@ -156,8 +156,8 @@ mark_unplugged_vpdo(pvhub_dev_t vhub, pvpdo_dev_t vpdo)
 	}
 }
 
-PAGEABLE void
-vhub_mark_unplugged_vpdo(pvhub_dev_t vhub, pvpdo_dev_t vpdo)
+PAGEABLE 
+void vhub_mark_unplugged_vpdo(pvhub_dev_t vhub, pvpdo_dev_t vpdo)
 {
 	ExAcquireFastMutex(&vhub->Mutex);
 	mark_unplugged_vpdo(vhub, vpdo);

@@ -23,8 +23,6 @@ driver_unload(_In_ WDFDRIVER drvobj)
 	WPP_CLEANUP(WdfDriverWdmGetDriverObject((WDFDRIVER)drvobj));
 }
 
-DRIVER_INITIALIZE DriverEntry;
-
 INITABLE NTSTATUS
 DriverEntry(_In_ PDRIVER_OBJECT drvobj, _In_ PUNICODE_STRING regpath)
 {
